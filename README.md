@@ -56,8 +56,11 @@ dataset = tf.keras.preprocessing.image_dataset_from_directory(
     image_size=(256, 256),
     batch_size=32
 )
-
 ```
+
+---
+
+
 ## **Model Architecture**
 The model is designed with the following layers:
 - **Input Layer**: Accepts images of size `(256, 256, 3)`.
@@ -79,6 +82,9 @@ model = models.Sequential([
 ])
 model.summary()
 ```
+
+---
+
 ## **Installation Guide**
 
 ### **Prerequisites**
@@ -100,12 +106,12 @@ model.summary()
    pip install -r requirements.txt
    ```
 
+---
+
 ## **Training and Evaluation**
 
 ### **Data Augmentation**  
 Techniques used include rotation, flipping, and zooming to enhance model generalization.
-
----
 
 ### **Model Compilation:**
 ```python
@@ -122,6 +128,8 @@ history = model.fit(dataset, epochs=20, validation_split=0.2)
 loss, accuracy = model.evaluate(dataset)
 print(f"Test Accuracy: {accuracy * 100:.2f}%")
 ```
+---
+
 ## **Results and Analysis**
 - **Accuracy**: Over 90% test accuracy achieved.
 - **Confusion Matrix**: Demonstrates the model’s capability in correctly classifying each category.
@@ -138,7 +146,11 @@ print(f"Test Accuracy: {accuracy * 100:.2f}%")
 - **Data Augmentation** helped balance the dataset.
 - **Early Stopping** and **Dropout Layers** were implemented to prevent overfitting.
 
+---
+
 ## **Future Enhancements**
 - **Multi-modal Data Integration**: Combine ultrasound images with other diagnostic data like mammograms.
 - **Transfer Learning**: Use pre-trained models like **ResNet** or **VGG** for better accuracy.
 - **Web Application**: Deploy the model as a web service for real-time breast cancer diagnosis.
+
+---
